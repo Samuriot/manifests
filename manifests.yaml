@@ -288,7 +288,7 @@ spec:
                 - ALL
             privileged: false
             readOnlyRootFilesystem: true
-          image: trial7361oj.jfrog.io/microservices/checkoutservice:v1
+          image: trial7361oj.jfrog.io/microservices/checkoutservice:v2
           ports:
           - containerPort: 5050
           readinessProbe:
