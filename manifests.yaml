@@ -49,7 +49,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        $BUILD_NUMBER
+        image: localhost/currencyservice:v1
         imagePullPolicy: Never
         ports:
         - name: grpc
@@ -159,7 +159,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        $BUILD_NUMBER
+        image: localhost/loadgenerator:v1
         imagePullPolicy: Never
         env:
         - name: FRONTEND_ADDR
@@ -210,7 +210,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        $BUILD_NUMBER
+        image: localhost/productcatalogservice:v1
         imagePullPolicy: Never
         ports:
         - containerPort: 3550
@@ -283,7 +283,7 @@ spec:
                 - ALL
             privileged: false
             readOnlyRootFilesystem: true
-          $BUILD_NUMBER
+          image: localhost/checkoutservice:v1
           imagePullPolicy: Never
           ports:
           - containerPort: 5050
@@ -366,7 +366,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        $BUILD_NUMBER
+        image: localhost/shippingservice:v1
         imagePullPolicy: Never
         ports:
         - containerPort: 50051
@@ -441,7 +441,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        $BUILD_NUMBER
+        image: localhost/cartservice:v1
         imagePullPolicy: Never
         ports:
         - containerPort: 7070
@@ -585,7 +585,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        $BUILD_NUMBER
+        image: localhost/emailservice:v1
         imagePullPolicy: Never
         ports:
         - containerPort: 8080
@@ -661,7 +661,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        $BUILD_NUMBER
+        image: localhost/paymentservice:v1
         imagePullPolicy: Never
         ports:
         - containerPort: 50051
@@ -736,7 +736,7 @@ spec:
                 - ALL
             privileged: false
             readOnlyRootFilesystem: true
-          $BUILD_NUMBER
+          image: localhost/frontend:v1
           imagePullPolicy: Never
           ports:
           - containerPort: 8080
@@ -864,7 +864,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        $BUILD_NUMBER
+        image: localhost/recommendationservice:v1
         imagePullPolicy: Never
         ports:
         - containerPort: 8080
@@ -942,7 +942,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        $BUILD_NUMBER
+        image: localhost/adservice:v1
         imagePullPolicy: Never
         ports:
         - containerPort: 9555
