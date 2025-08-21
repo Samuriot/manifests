@@ -942,7 +942,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: localhost/adservice:v93
+        image: localhost/adservice:v94
         imagePullPolicy: Never
         ports:
         - containerPort: 9555
