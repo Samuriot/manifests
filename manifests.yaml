@@ -593,7 +593,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: trial7361oj.jfrog.io/microservices/emailservice:v1
+        image: trial7361oj.jfrog.io/microservices/emailservice:v2
         ports:
         - containerPort: 8080
         env:
