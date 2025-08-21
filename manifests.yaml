@@ -35,6 +35,8 @@ spec:
     spec:
       serviceAccountName: currencyservice
       terminationGracePeriodSeconds: 5
+      imagePullSecrets:
+        - name: jfrog
       securityContext:
         fsGroup: 1000
         runAsGroup: 1000
@@ -49,8 +51,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: localhost/currencyservice:v1
-        imagePullPolicy: Never
+        image: trial7361oj.jfrog.io/currencyservice:v1
         ports:
         - name: grpc
           containerPort: 7000
@@ -150,6 +151,8 @@ spec:
         env:
         - name: FRONTEND_ADDR
           value: "frontend:80"
+      imagePullSecrets:
+      - name: jfrog
       containers:
       - name: main
         securityContext:
@@ -159,8 +162,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: localhost/loadgenerator:v1
-        imagePullPolicy: Never
+        image: trial7361oj.jfrog.io/loadgenerator:v1
         env:
         - name: FRONTEND_ADDR
           value: "frontend:80"
@@ -196,6 +198,8 @@ spec:
     spec:
       serviceAccountName: productcatalogservice
       terminationGracePeriodSeconds: 5
+      imagePullSecrets:
+      - name: jfrog
       securityContext:
         fsGroup: 1000
         runAsGroup: 1000
@@ -210,8 +214,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: localhost/productcatalogservice:v1
-        imagePullPolicy: Never
+        image: trial7361oj.jfrog.io/productcatalogservice:v1
         ports:
         - containerPort: 3550
         env:
@@ -269,6 +272,8 @@ spec:
         app: checkoutservice
     spec:
       serviceAccountName: checkoutservice
+      imagePullSecrets:
+      - name: jfrog
       securityContext:
         fsGroup: 1000
         runAsGroup: 1000
@@ -283,8 +288,7 @@ spec:
                 - ALL
             privileged: false
             readOnlyRootFilesystem: true
-          image: localhost/checkoutservice:v1
-          imagePullPolicy: Never
+          image: trial7361oj.jfrog.io/checkoutservice:v1
           ports:
           - containerPort: 5050
           readinessProbe:
@@ -352,6 +356,8 @@ spec:
         app: shippingservice
     spec:
       serviceAccountName: shippingservice
+      imagePullSecrets:
+      - name: jfrog
       securityContext:
         fsGroup: 1000
         runAsGroup: 1000
@@ -366,8 +372,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: localhost/shippingservice:v1
-        imagePullPolicy: Never
+        image: trial7361oj.jfrog.io/shippingservice:v1
         ports:
         - containerPort: 50051
         env:
@@ -427,6 +432,8 @@ spec:
     spec:
       serviceAccountName: cartservice
       terminationGracePeriodSeconds: 5
+      imagePullSecrets:
+      - name: jfrog
       securityContext:
         fsGroup: 1000
         runAsGroup: 1000
@@ -441,8 +448,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: localhost/cartservice:v1
-        imagePullPolicy: Never
+        image: trial7361oj.jfrog.io/cartservice:v1
         ports:
         - containerPort: 7070
         env:
@@ -571,6 +577,8 @@ spec:
     spec:
       serviceAccountName: emailservice
       terminationGracePeriodSeconds: 5
+      imagePullSecrets:
+      - name: jfrog
       securityContext:
         fsGroup: 1000
         runAsGroup: 1000
@@ -585,8 +593,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: localhost/emailservice:v1
-        imagePullPolicy: Never
+        image: trial7361oj.jfrog.io/emailservice:v1
         ports:
         - containerPort: 8080
         env:
@@ -647,6 +654,8 @@ spec:
     spec:
       serviceAccountName: paymentservice
       terminationGracePeriodSeconds: 5
+      imagePullSecrets:
+      - name: jfrog
       securityContext:
         fsGroup: 1000
         runAsGroup: 1000
@@ -661,8 +670,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: localhost/paymentservice:v1
-        imagePullPolicy: Never
+        image: trial7361oj.jfrog.io/paymentservice:v1
         ports:
         - containerPort: 50051
         env:
@@ -722,6 +730,8 @@ spec:
         sidecar.istio.io/rewriteAppHTTPProbers: "true"
     spec:
       serviceAccountName: frontend
+      imagePullSecrets:
+      - name: jfrog
       securityContext:
         fsGroup: 1000
         runAsGroup: 1000
@@ -736,8 +746,7 @@ spec:
                 - ALL
             privileged: false
             readOnlyRootFilesystem: true
-          image: localhost/frontend:v1
-          imagePullPolicy: Never
+          image: trial7361oj.jfrog.io/frontend:v1
           ports:
           - containerPort: 8080
           readinessProbe:
@@ -849,6 +858,8 @@ spec:
         app: recommendationservice
     spec:
       serviceAccountName: recommendationservice
+      imagePullSecrets:
+      - name: jfrog
       terminationGracePeriodSeconds: 5
       securityContext:
         fsGroup: 1000
@@ -864,8 +875,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: localhost/recommendationservice:v1
-        imagePullPolicy: Never
+        image: trial7361oj.jfrog.io/recommendationservice:v1
         ports:
         - containerPort: 8080
         readinessProbe:
@@ -928,6 +938,8 @@ spec:
     spec:
       serviceAccountName: adservice
       terminationGracePeriodSeconds: 5
+      imagePullSecrets:
+      - name: jfrog
       securityContext:
         fsGroup: 1000
         runAsGroup: 1000
@@ -942,8 +954,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: localhost/adservice:v94
-        imagePullPolicy: Never
+        image: trial7361oj.jfrog.io/adservice:v1
         ports:
         - containerPort: 9555
         env:
