@@ -214,7 +214,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: trial7361oj.jfrog.io/microservices/productcatalogservice:v1
+        image: trial7361oj.jfrog.io/microservices/productcatalogservice:v2
         ports:
         - containerPort: 3550
         env:
