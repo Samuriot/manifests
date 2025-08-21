@@ -875,7 +875,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: trial7361oj.jfrog.io/microservices/recommendationservice:v1
+        image: trial7361oj.jfrog.io/microservices/recommendationservice:v2
         ports:
         - containerPort: 8080
         readinessProbe:
