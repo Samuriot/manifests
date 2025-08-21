@@ -162,7 +162,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: trial7361oj.jfrog.io/microservices/loadgenerator:v1
+        image: trial7361oj.jfrog.io/microservices/loadgenerator:v3
         env:
         - name: FRONTEND_ADDR
           value: "frontend:80"
