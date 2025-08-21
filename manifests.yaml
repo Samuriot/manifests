@@ -670,7 +670,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: trial7361oj.jfrog.io/microservices/paymentservice:v1
+        image: trial7361oj.jfrog.io/microservices/paymentservice:v2
         ports:
         - containerPort: 50051
         env:
