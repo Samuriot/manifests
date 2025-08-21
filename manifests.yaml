@@ -51,7 +51,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: trial7361oj.jfrog.io/microservices/currencyservice:v1
+        image: trial7361oj.jfrog.io/microservices/currencyservice:v2
         ports:
         - name: grpc
           containerPort: 7000
