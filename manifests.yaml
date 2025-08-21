@@ -448,7 +448,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: trial7361oj.jfrog.io/microservices/cartservice:v1
+        image: trial7361oj.jfrog.io/microservices/cartservice:v6
         ports:
         - containerPort: 7070
         env:
